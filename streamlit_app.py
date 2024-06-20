@@ -2,7 +2,6 @@ import altair as alt
 import numpy as np
 import pandas as pd
 ## import seaborn as sns 
-python -m pip install seaborn
 import matplotlib.pyplot as plt
 import streamlit as st
 import plotly.graph_objects as go
