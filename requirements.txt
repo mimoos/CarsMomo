@@ -1,4 +1,5 @@
 altair
 pandas
+numpy
 streamlit
 seaborn
