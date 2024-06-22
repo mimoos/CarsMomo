@@ -10,6 +10,7 @@ import plotly.graph_objects as go
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 Car_data
 
+Car_name = st.text_input('label')
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
