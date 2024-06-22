@@ -11,7 +11,7 @@ Car_data = pd.read_csv('true_car_listings_fix.csv')
 Car_data
 
 Car_data.columns
-List_make = Car_data['Make'].tolist()
+List_make = Car_data['Make'].tolist().unique().sort()
 List_make
 
 Car_Make = st.selectbox('Car Make', options=List_car.sort())
