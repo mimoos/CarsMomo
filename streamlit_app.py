@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 ## import sklearn
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
-Car_data
+type(Car_data)
 
 Car_data.columns
 List_make = Car_data.loc[:,'Make'].tolist().unique()
