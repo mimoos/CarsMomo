@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 Car_data
 
-List_car=list(Car_data['Make']).unique()
+List_car=Car_data['Make'].values.unique()
 
 Car_Make = st.selectbox('Car Make', options=List_car.sort())
 Car_Year = st.selectbox('Car Year', options=Car_data['Year'].unique())
