@@ -10,6 +10,9 @@ import plotly.graph_objects as go
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 Car_data
 
+Car_data.columns
+Car_data.columns['Make']
+
 List_car=Car_data['Make'].values.unique()
 List_car
 
