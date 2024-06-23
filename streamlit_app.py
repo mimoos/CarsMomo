@@ -5,13 +5,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 import plotly.graph_objects as go
-## import sklearn
+from sklearn.linear_model import LinearRegression
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 print(type(Car_data))
 
-## For select box of Make and Model
-
+## To ask the user the Make, Model, Year and Mileage
 
 List_make = Car_data['Make'].unique().tolist()
 List_make.sort()
@@ -28,7 +27,10 @@ Car_year = st.selectbox('Car Year:', options=List_year, index=None)
 Car_mileage = st.text_input('Car Mileage:', value=None)
 ## Car_mileage = int(Car_mileage)
 
+## To get dummies for Make and Model
 
+columns = pd.get_dummies(Car_data['Make', 'Model'])
+columns
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
