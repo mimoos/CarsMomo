@@ -35,7 +35,10 @@ column_Make
 
 label_encoder = preprocessing.LabelEncoder()
 column_Model = label_encoder.fit_transform(Car_data['Model'])
-column_Model
+
+Car_model
+Car_model = label_encoder.transform(Car_data['Model])
+Car_model
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
