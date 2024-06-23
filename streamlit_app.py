@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import plotly.graph_objects as go
 from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 print(type(Car_data))
@@ -30,8 +31,12 @@ Car_mileage = st.text_input('Car Mileage:', value=None)
 ## To get dummies for Make and Model
 
 ## columns = pd.get_dummies(data=Car_data, columns=['Make', 'Model'])        too large data >200mb
-columns = pd.get_dummies(data=Car_data, columns=['Make'])
-columns
+column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
+column_Make
+
+label_encoder = preprocessing.LabelEncoder()
+column_Model = label_encoder.fit_transform(Car_data['Model'])
+column_Model
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
