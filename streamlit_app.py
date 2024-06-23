@@ -35,7 +35,7 @@ column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
 
 label_encoder = preprocessing.LabelEncoder()
 column_Model = label_encoder.fit_transform(Car_data['Model'])
-column_Model = pd.DataFrame(column_Model)
+column_Model = pd.DataFrame(column_Model, columns = ['Model'])
 column_Model
 
 ## Car_model = label_encoder.transform([Car_model])
