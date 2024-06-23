@@ -9,7 +9,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
-print(type(Car_data))
 
 ## To ask the user the Make, Model, Year and Mileage
 
