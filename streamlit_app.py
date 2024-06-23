@@ -19,8 +19,8 @@ List_model = Car_data['Model'].unique().tolist()
 List_model.sort()
 
 
-Car_make = st.selectbox('Car Make', options=List_make, index=0)
-Car_model = st.selectbox('Car Model', options=List_model, index=0)
+Car_make = st.selectbox('Car Make', options=List_make, index=None)
+Car_model = st.selectbox('Car Model', options=List_model, index=None)
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
