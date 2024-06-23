@@ -25,6 +25,10 @@ List_year.sort()
 Car_make = st.selectbox('Car Make:', options=List_make, index=None)
 Car_model = st.selectbox('Car Model:', options=List_model, index=None)
 Car_year = st.selectbox('Car Year:', options=List_year, index=None)
+Car_mileage = st.text_input('Car Mileage:', index=None)
+Car_mileage = int(Car_mileage)
+
+st.write(Car_mileage)
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
