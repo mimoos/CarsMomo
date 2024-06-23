@@ -49,7 +49,7 @@ Car_data_new
 ## MACHINELEARNING
 
 Y = Car_data_new['Price']
-X = Car_data.drop(['Price'], axis=1)
+X = Car_data_new.drop(['Price'], axis=1)
 
 X
 
