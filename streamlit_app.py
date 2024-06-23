@@ -12,15 +12,19 @@ print(type(Car_data))
 
 ## For select box of Make and Model
 
+Car_data.columns
 List_make = Car_data['Make'].unique().tolist()
 List_make.sort()
 
 List_model = Car_data['Model'].unique().tolist()
 List_model.sort()
 
+List_year = Car_data['Year'].unique().tolist()
+List_year.sort()
 
-Car_make = st.selectbox('Car Make', options=List_make, index=None)
-Car_model = st.selectbox('Car Model', options=List_model, index=None)
+Car_make = st.selectbox('Car Make:', options=List_make, index=None)
+Car_model = st.selectbox('Car Model:', options=List_model, index=None)
+Car_year = st.selectbox('Car Year:', options=List_year, index=None)
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
