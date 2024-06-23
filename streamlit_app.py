@@ -38,7 +38,9 @@ column_Model = label_encoder.fit_transform(Car_data['Model'])
 column_Model = pd.DataFrame(column_Model, columns = ['Model'])
 column_Model
 
+Car_model
 Car_model = label_encoder.transform([Car_model])
+Car_model
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
 Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
