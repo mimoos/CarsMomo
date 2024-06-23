@@ -19,7 +19,7 @@ List_make.sort()
 List_model = Car_data['Model'].unique().tolist()
 List_model.sort()
 
-List_year = Car_data['Year'].unique().tolist().astype('int32')
+List_year = Car_data['Year'].unique().tolist()
 List_year.sort()
 
 Car_make = st.selectbox('Car Make:', options=List_make, index=None)
