@@ -10,13 +10,17 @@ import plotly.graph_objects as go
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 print(type(Car_data))
 
-Car_data.columns
+## For select box of Make and Model
+
 List_make = Car_data['Make'].unique().tolist()
 List_make.sort()
-List_make
 
-Car_Make = st.selectbox('Car Make', options=List_make)
-Car_Year = st.selectbox('Car Year', options=Car_data['Year'].unique())
+List_model = Car_data['Model'].unique().tolist()
+List_model.sort()
+
+
+Car_make = st.selectbox('Car Make', options=List_make)
+Car_model = st.selectbox('Car Model', options=List_model)
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
