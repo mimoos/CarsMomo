@@ -24,7 +24,7 @@ List_year.sort()
 Car_make = st.selectbox('Car Make:', options=List_make, index=None)
 Car_model = st.selectbox('Car Model:', options=List_model, index=None)
 Car_year = st.selectbox('Car Year:', options=List_year, index=None)
-Car_mileage = int(st.text_input('Car Mileage:', value=None))
+Car_mileage = st.text_input('Car Mileage:', value=None)
 ## Car_mileage = int(Car_mileage)
 
 ## To get dummies for Make and encoding for Model
@@ -45,6 +45,13 @@ Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
 Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
 
 Car_data_new
+
+## MACHINELEARNING
+
+Y = Car_data_new['Price']
+X = Car_data.drop(['Price'], axis=1)
+
+X
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
