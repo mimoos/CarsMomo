@@ -29,7 +29,7 @@ Car_mileage = st.text_input('Car Mileage:', value=None)
 
 ## To get dummies for Make and Model
 
-columns = pd.get_dummies(data=Car_data, columns=['Make', 'Model])
+columns = pd.get_dummies(data=Car_data, columns=['Make'], ['Model'])
 columns
 
 """
