@@ -48,10 +48,13 @@ Car_data_new
 
 ## MACHINELEARNING
 
-Y = Car_data_new['Price']
+y = Car_data_new['Price']
 X = Car_data_new.drop(['Price'], axis=1)
 
-X
+LinearModel = LinearRegression()
+LinearModel.fit(X, y)
+
+X_Features = X.columns
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
