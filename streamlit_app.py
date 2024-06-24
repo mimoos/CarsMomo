@@ -55,7 +55,7 @@ LinearModel = LinearRegression()
 LinearModel.fit(X, y)
 
 X_Features = X.columns
-
+X_Features
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
 
