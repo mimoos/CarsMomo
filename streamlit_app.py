@@ -56,7 +56,7 @@ LinearModel.fit(X, y)
 
 X_Features = X.columns
 X_Features
-X.columns
+
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
 
