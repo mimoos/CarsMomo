@@ -61,7 +61,11 @@ X_Features = X.columns
 b = LinearModel.intercept_
 w = LinearModel.coef_
 
-w
+def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
+
+    return price_predicted
+
+X.shape
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
