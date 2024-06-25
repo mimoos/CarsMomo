@@ -59,7 +59,7 @@ X_Features = X.columns
 b = LinearModel.intercept_
 w = LinearModel.coef_
 
-b
+w
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
