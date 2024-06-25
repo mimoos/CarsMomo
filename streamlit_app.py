@@ -64,7 +64,7 @@ w = LinearModel.coef_
 def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     data = []
     for row in X_Features:
-        data.append(row)
+        data.append(row) = 0
     ## price_predicted
     return data
 
