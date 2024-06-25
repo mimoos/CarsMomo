@@ -62,11 +62,15 @@ b = LinearModel.intercept_
 w = LinearModel.coef_
 
 def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
-
+data = []
+for row in X_Features():
+    data.append(row)
+    
     return price_predicted
 
 X.shape[0]
 X_Features[60]
+X.values[0]
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
