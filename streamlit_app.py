@@ -61,14 +61,14 @@ X_Features = X.columns
 b = LinearModel.intercept_
 w = LinearModel.coef_
 
-def Click_Predict (X_Features, Car_make, Car_model, Car_year, Car_mileage):
+def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     data = []
-    for row in X_Features():
+    for row in X_Features:
         data.append(row)
     
     return price_predicted, data
 
-Click_Predict(X_Features, Car_make, Car_model, Car_year, Car_mileage)
+Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
 
 
 X.shape[0]
