@@ -73,7 +73,7 @@ See = Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
 
 X.shape[0]
 X_Features[60]
-See[0]
+See
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
