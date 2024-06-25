@@ -73,7 +73,7 @@ Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
 
 X.shape[0]
 X_Features[60]
-Click_Predict[1]
+Click_Predict[0]
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
