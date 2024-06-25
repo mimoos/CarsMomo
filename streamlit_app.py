@@ -66,7 +66,7 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     return price_predicted
 
 X.shape[0]
-X_Features[0]
+X_Features[0, 1]
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
