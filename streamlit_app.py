@@ -27,6 +27,8 @@ Car_year = st.selectbox('Car Year:', options=List_year, index=None)
 Car_mileage = st.text_input('Car Mileage:', value=None)
 ## Car_mileage = int(Car_mileage)
 
+st.button('Predict the price')
+
 ## To get dummies for Make and encoding for Model
 
 ## columns = pd.get_dummies(data=Car_data, columns=['Make', 'Model'])        too large data >200mb
