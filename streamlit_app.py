@@ -65,8 +65,9 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     data = []
     for row in X_Features:
         data.append(row) = 0
+    df = pd.DataFrame(data)
     ## price_predicted
-    return data
+    return df
 
 See = Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
 
