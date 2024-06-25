@@ -55,7 +55,11 @@ LinearModel = LinearRegression()
 LinearModel.fit(X, y)
 
 X_Features = X.columns
-X_Features
+
+b = LinearModel.intercept_
+w = LinearModel.coef_
+
+b
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
