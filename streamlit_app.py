@@ -62,9 +62,12 @@ b = LinearModel.intercept_
 w = LinearModel.coef_
 
 def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
-    data = list()
-    for i in range(0, 60):
-        data[i] = 0
+    data = [None] * 60
+
+    ##   data = []
+    ##for row in some_function_that_yields_data():
+    ##data.append(row)
+
     ## df = pd.DataFrame(data)
     ## price_predicted
     return data
