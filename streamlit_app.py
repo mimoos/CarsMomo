@@ -65,8 +65,8 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     data = []
     for row in X_Features:
         data.append(row)
-    
-    return price_predicted, data
+    ## price_predicted
+    return data
 
 Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
 
