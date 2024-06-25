@@ -66,11 +66,14 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     for row in X_Features():
         data.append(row)
     
-    return price_predicted
+    return price_predicted, data
+
+Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
+
 
 X.shape[0]
 X_Features[60]
-X.values[0]
+Click_Predict[1]
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
