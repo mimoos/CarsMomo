@@ -37,7 +37,7 @@ column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 ## label_encoder = preprocessing.LabelEncoder()
 ## column_Model = label_encoder.fit_transform(Car_data['Model'])
 One_Hot_Encoder = preprocessing.OneHotEncoder()
-column_Model = Car_data.to_frame(name='Model')
+column_Model = Car_data.DataFrame(name='Model')
 column_Model = One_Hot_Encoder.fit_transform(column_Model)
 ## column_Model = pd.DataFrame(column_Model, columns = ['Model'])
 
