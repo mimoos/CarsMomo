@@ -26,8 +26,6 @@ Car_model = st.selectbox('Car Model:', options=List_model, index=None)
 Car_year = st.selectbox('Car Year:', options=List_year, index=None)
 Car_mileage = st.text_input('Car Mileage:', value=None)
 
-Jordan = type(Car_make)
-Jordan
 st.button('Predict the price')
 
 ## To get dummies for Make and encoding for Model
