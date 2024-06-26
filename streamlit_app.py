@@ -10,6 +10,9 @@ from sklearn import preprocessing
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 
+allo = type(Car_data)
+allo 
+
 ## To ask the user the Make, Model, Year and Mileage
 
 List_make = Car_data['Make'].unique().tolist()
@@ -41,7 +44,7 @@ One_Hot_Encoder = preprocessing.OneHotEncoder(categories='auto')
 ## column_Model = One_Hot_Encoder.fit_transform(Car_data.loc[:, 4])
 ## column_Model = pd.DataFrame(column_Model, columns = ['Model'])
 
-type(Car_data)
+
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
 ## Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
