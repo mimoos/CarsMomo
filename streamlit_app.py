@@ -72,7 +72,7 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     data[1] = Car_mileage
 
     Car_make = 'Make_' + Car_make
-    for i in range(Column_Names):
+    for i in range(len(Column_Names)):
         if Column_Names[i] == Car_make:
             data[i] = 1
         
