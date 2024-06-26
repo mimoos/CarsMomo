@@ -72,7 +72,8 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
 
     Car_make = 'Make_' + Car_make
     Column_Names = np.array(Column_Names)
-    for index, i in np.ndenumerate(Column_Names):
+    # for index, i in np.ndenumerate(Column_Names):
+    for i in range(Column_Names.shape[0]):  # or range(len(theta))
     # for i in enumerate(Column_Names):
         if Column_Names[i] == Car_make:
             data[i] = 1
