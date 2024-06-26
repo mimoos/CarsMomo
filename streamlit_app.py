@@ -25,7 +25,7 @@ Car_make = st.selectbox('Car Make:', options=List_make, index=None)
 Car_model = st.selectbox('Car Model:', options=List_model, index=None)
 Car_year = st.selectbox('Car Year:', options=List_year, index=None)
 Car_mileage = st.text_input('Car Mileage:', value=None)
-## Car_mileage = int(Car_mileage)
+
 
 st.button('Predict the price')
 
@@ -38,9 +38,6 @@ column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 label_encoder = preprocessing.LabelEncoder()
 column_Model = label_encoder.fit_transform(Car_data['Model'])
 column_Model = pd.DataFrame(column_Model, columns = ['Model'])
-
-## Car_model = label_encoder.transform([Car_model])
-
 
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
@@ -62,12 +59,25 @@ b = LinearModel.intercept_
 w = LinearModel.coef_
 
 def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
-    data = [None] * 60
+    data = [None] * 61
 
-    ##   data = []
-    ##for row in some_function_that_yields_data():
-    ##data.append(row)
+    Column_Names = []
+    for row in X_Features:
+        Column_Names.append(row)
 
+    Car_year = int(Car_year)
+    data[0]= Car_year
+
+    Car_mileage = int(Car_mileage)
+    data[1] = Car_mileage
+
+    for row in Column_Names:
+        if Column_Names[row] == 'Make_" + Car_make:
+            data[row] = 1
+        
+    Car_model = label_encoder.transform([Car_model])
+    data[61] = Car_model
+    
     ## df = pd.DataFrame(data)
     ## price_predicted
     return data
