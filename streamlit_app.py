@@ -70,7 +70,7 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
 
     ## Car_mileage = int(Car_mileage)
     data[1] = Car_mileage
-m
+
     Car_make = 'Make_' + Car_make
     Column_Names = np.array(Column_Names)
     for i in enumerate(Column_Names):
