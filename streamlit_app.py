@@ -57,6 +57,8 @@ X_Features = X.columns
 b = LinearModel.intercept_
 w = LinearModel.coef_
 
+w
+
 def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     data = [None] * 61
 
@@ -91,7 +93,7 @@ See = Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
 X.shape[0]
 X_Features[60]
 See
-w
+
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
