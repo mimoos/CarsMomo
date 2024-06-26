@@ -79,8 +79,8 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
             data[i] = 1
         
     Car_model = label_encoder.transform([Car_model])
-    Car_model = np.array(Car_model)
-    data[60] = int(Car_model[0])
+    ## Car_model = np.array(Car_model)
+    data[60] = Car_model
     
     ## df = pd.DataFrame(data)
     ## price_predicted
