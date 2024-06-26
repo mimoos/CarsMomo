@@ -42,7 +42,8 @@ column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 One_Hot_Encoder = preprocessing.OneHotEncoder(sparse_output=False)
 ## column_Model = Car_data['Model']
 column_Model = One_Hot_Encoder.fit_transform(Car_data['Model'].values.reshape(-1, 1))
-column_Model = pd.DataFrame(column_Model)
+column_Model = pd.DataFrame(column_Model, columns=One_Hot_Encoder.get_feature_names_out(Car_data['Model']))
+## column_Model = pd.DataFrame(column_Model)
 ## column_Model = np.array(column_Model, dtype=int)
 
 column_Model
