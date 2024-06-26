@@ -83,15 +83,14 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     
     ## df = pd.DataFrame(data)
     ## price_predicted
-    return Column_Names
+    return data
 
 See = Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
 
 
 X.shape[0]
 X_Features[60]
-what = type(See)
-what
+See
 
 """
 # Welcome to Streamlit CAN I EDIT THIS?!
