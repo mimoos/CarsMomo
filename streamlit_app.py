@@ -37,11 +37,11 @@ column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 ## label_encoder = preprocessing.LabelEncoder()
 ## column_Model = label_encoder.fit_transform(Car_data['Model'])
 One_Hot_Encoder = preprocessing.OneHotEncoder()
-column_Model = Car_data.DataFrame(name='Model')
-column_Model = One_Hot_Encoder.fit_transform(column_Model)
+column_Model = Car_data['Model']
+## column_Model = One_Hot_Encoder.fit_transform(column_Model)
 ## column_Model = pd.DataFrame(column_Model, columns = ['Model'])
 
-Column_Model
+type(Column_Model)
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
 Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
