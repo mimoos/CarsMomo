@@ -72,9 +72,9 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     data[1] = Car_mileage
 
     Car_make = 'Make_' + Car_make
-    for row in Column_Names:
-        if Column_Names[row] == Car_make:
-            data[row] = 1
+    for i in range(Column_Names):
+        if Column_Names[i] == Car_make:
+            data[i] = 1
         
     Car_model = label_encoder.transform([Car_model])
     data[60] = Car_model
