@@ -45,8 +45,8 @@ column_Model = One_Hot_Encoder.fit_transform(Car_data['Model'].values.reshape(-1
 ## column_Model = pd.DataFrame(column_Model)
 ## column_Model = np.array(column_Model, dtype=int)
 
-column_Model
-
+lo = type(column_Model)
+lo
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
 ## Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
