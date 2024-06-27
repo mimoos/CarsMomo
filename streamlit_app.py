@@ -41,7 +41,7 @@ column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
 column_Model = Car_data['Model']
 encoder = OneHotEncoder()
-column_Model = encoder.fit_transform(column_Model.values.unique().reshape(-1,1))
+column_Model = encoder.fit_transform(column_Model.values.reshape(-1,1))
 
 
 ## label_encoder = preprocessing.LabelEncoder()
