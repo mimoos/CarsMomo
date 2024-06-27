@@ -40,7 +40,7 @@ column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
 column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
 column_Model = Car_data['Model']
-encoder = OneHotEncoder(sparse=False)
+encoder = OneHotEncoder(sparse_output=False)
 car_models_2d = np.array(column_Model).reshape(-1, 1)
 encoded = encoder.fit_transform(car_models_2d)
 luxury_encoded = encoder.transform(encoded)
