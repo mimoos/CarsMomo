@@ -39,8 +39,9 @@ st.button('Predict the price')
 column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
 column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
-column_Model = pd.get_dummies(data=Car_data, columns=['Model'])
-column_Model = column_Model.drop(['Price', 'Year', 'Make', 'Mileage'], axis=1)
+encoder = OneHotEncoder(handle_unknown="ignore", sparse=False)
+column_Model = encoder.fit(column_Model)
+column_Model= encoder.transform(column_Model)
 
 ## label_encoder = preprocessing.LabelEncoder()
 ## column_Model = label_encoder.fit_transform(Car_data['Model'])
