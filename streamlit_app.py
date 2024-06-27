@@ -45,7 +45,7 @@ column_Model_fit = encoder.fit((column_Model).values.reshape(-1,1))
 column_Model_transformed = encoder.transform((column_Model).values.reshape(-1,1))
 
 column_Model_fit
-column_Model_transformed
+## column_Model_transformed
 
 #column_Model = Car_data['Model']
 #encoder = OneHotEncoder()
