@@ -97,7 +97,7 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
             data[i] = 1
 
     Car_model = 'Model_' + Car_model
-    Column_Names = np.array(Column_Names)
+    #Column_Names = np.array(Column_Names)
     # for index, i in np.ndenumerate(Column_Names):
     for i in range(Column_Names.shape[0]):  # or range(len(theta))
     # for i in enumerate(Column_Names):
