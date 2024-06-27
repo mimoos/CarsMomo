@@ -55,6 +55,7 @@ Car_data_new
 
 
 ## MACHINELEARNING
+Car_data_new.fillna(0, inplace=True)
 
 y = Car_data_new['Price']
 X = Car_data_new.drop(['Price'], axis=1)
