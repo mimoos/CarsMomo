@@ -13,7 +13,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 
-Car_data = Car_data.sample(frac=0.005, random_state=42)
+Car_data = Car_data.sample(frac=0.002, random_state=42)
 Car_data['Model'] = Car_data['Model'].str.replace(',', '')
 
 
