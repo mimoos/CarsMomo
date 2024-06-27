@@ -37,7 +37,7 @@ st.button('Predict the price')
 
 ## To get dummies for Make and encoding for Model
 
-columns_Make = pd.get_dummies(data=Car_data, columns=['Make', 'Model'])        #too large data >200mb
+column_Make = pd.get_dummies(data=Car_data, columns=['Make', 'Model'])        #too large data >200mb
 #column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
 #column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 column_Make = column_Make.drop(['Price', 'Year', 'Mileage'], axis=1)
