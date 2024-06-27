@@ -59,7 +59,7 @@ y = Car_data_new['Price']
 X = Car_data_new.drop(['Price'], axis=1)
 
 X = X.apply(pd.to_numeric, errors='coerce')
-y = Y.apply(pd.to_numeric, errors='coerce')
+y = y.apply(pd.to_numeric, errors='coerce')
 
 LinearModel = LinearRegression()
 LinearModel.fit(X, y)
