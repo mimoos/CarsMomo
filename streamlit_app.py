@@ -53,6 +53,9 @@ Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset
 
 Car_data_new
 
+cell_value = Car_data_new.iloc[1, 1]
+cell_value
+
 ## MACHINELEARNING
 
 y = Car_data_new['Price']
