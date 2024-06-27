@@ -37,10 +37,12 @@ st.button('Predict the price')
 
 ## To get dummies for Make and encoding for Model
 
-column_Make = pd.get_dummies(data=Car_data, columns=['Make', 'Model'])        #too large data >200mb
-#column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
-#column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
-column_Make = column_Make.drop(['Price', 'Year', 'Mileage'], axis=1)
+#column_Make = pd.get_dummies(data=Car_data, columns=['Make', 'Model'])        #too large data >200mb
+column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
+column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
+
+column_Model = pd.get_dummies(data=Car_data, columns = ['Model'])
+column_Model = column_Model.drop(['Price', 'Year', 'Mark', 'Mileage'], axis=1)
 
 #column_Model = Car_data['Model']
 #encoder = OneHotEncoder(sparse_output=False)
@@ -49,15 +51,13 @@ column_Make = column_Make.drop(['Price', 'Year', 'Mileage'], axis=1)
 
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
-#Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
-Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True)], axis=1)
-
+Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
 
 Car_data_new
 
 
 ## MACHINELEARNING
-Car_data_new.fillna(0, inplace=True)
+#Car_data_new.fillna(0, inplace=True)
 
 y = Car_data_new['Price']
 X = Car_data_new.drop(['Price'], axis=1)
@@ -76,7 +76,7 @@ lol = len(w)
 lol
 
 def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
-    data = [None] * 61
+    data = [None] * 425
 
     Column_Names = []
     for row in X_Features:
