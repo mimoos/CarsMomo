@@ -66,7 +66,7 @@ column_Model = np.array(ct.fit_transform(column_Model.values.reshape(1, -1)))
 ## column_Model = pd.DataFrame(column_Model)
 ## column_Model = np.array(column_Model, dtype=int)
 
-#column_Model
+column_Model
 
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
