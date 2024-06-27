@@ -72,6 +72,7 @@ b = LinearModel.intercept_
 w = LinearModel.coef_
 
 w
+len(w)
 
 def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     data = [None] * 61
