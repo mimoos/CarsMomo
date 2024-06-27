@@ -43,9 +43,9 @@ column_Model = Car_data['Model']
 encoder = OneHotEncoder(sparse_output=False)
 encoder.fit((column_Model).values.reshape(-1,1))
 column_Model_transformed = encoder.transform((column_Model).values.reshape(-1, 1))
-#encoded_df = pd.DataFrame(column_Model, columns=encoder.categories_[0])
+encoded_df = pd.DataFrame(column_Model, columns=encoder.categories_[0])
 
-column_Model_transformed
+encoded_df
 
 #column_Model = Car_data['Model']
 #encoder = OneHotEncoder()
