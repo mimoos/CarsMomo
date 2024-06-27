@@ -40,8 +40,9 @@ column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
 column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
 column_Model = Car_data['Model']
-encoder = OneHotEncoder()
-column_Model = np.array(encoder.fit_transform(column_Model.values.reshape(-1,1)))
+#encoder = OneHotEncoder()
+ct = ColumnTransformer(transformers=[('onehot_categorical', OneHotEncoder(), [0])], remainder='passthrough')
+column_Model = ct.fit_transform(column_Model.values.reshape(-1,1))
 
 
 ## label_encoder = preprocessing.LabelEncoder()
