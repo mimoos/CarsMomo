@@ -41,12 +41,10 @@ column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
 column_Model = Car_data['Model']
 encoder = OneHotEncoder(sparse_output=False)
-car_models_2d = np.array(column_Model).reshape(-1, 1)
-encoded = encoder.fit_transform(car_models_2d)
-#luxury_encoded = encoder.transform(encoded)
-#luxury_bool = np.sum(luxury_encoded, axis=1, dtype=bool)
+column_Model_fit = encoder.fit(column_Model)
+column_Model_transformed = encoder.transform(column_Model)
 
-encoded
+column_Model_transformed
 
 #column_Model = Car_data['Model']
 #encoder = OneHotEncoder()
