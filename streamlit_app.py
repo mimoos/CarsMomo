@@ -43,35 +43,13 @@ column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
 
 column_Model = Car_data['Model']
-##encoder = OneHotEncoder(sparse_output=False)
-##encoder.fit((column_Model).values.reshape(-1,1))
-##column_Model = pd.DataFrame(column_Model, columns=encoder.categories_[0])
-
-##column_Model
-
-
-#encoder = OneHotEncoder()
-#ct = ColumnTransformer(transformers=[('onehot_categorical', OneHotEncoder(), [0])], remainder='passthrough')
-#column_Model = ct.fit_transform(column_Model.values.reshape(-1,1))
-
-
-## label_encoder = preprocessing.LabelEncoder()
-## column_Model = label_encoder.fit_transform(Car_data['Model'])
-One_Hot_Encoder = preprocessing.OneHotEncoder(categories='auto')
-column_Model = Car_data['Model']
-ct = ColumnTransformer(transformers=[('onehot_categorical', OneHotEncoder(), [0])], remainder='passthrough')
-## column_Model = One_Hot_Encoder.fit_transform(Car_data['Model'].values.reshape(-1, 1))
-column_Model = pd.DataFrame(ct.fit_transform(column_Model.values.reshape(1, -1)))
-##column_Model = pd.DataFrame(column_Model, columns=One_Hot_Encoder.categories_[0])
-## column_Model = pd.DataFrame(column_Model, columns=One_Hot_Encoder.get_feature_names_out(Car_data['Model']))
-## column_Model = pd.DataFrame(column_Model)
-## column_Model = np.array(column_Model, dtype=int)
-
-column_Model
+encoder = OneHotEncoder(sparse_output=False)
+encoder.fit((column_Model).values.reshape(-1,1))
+column_Model = pd.DataFrame(column_Model, columns=encoder.categories_[0])
 
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
-## Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
+Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
 
 Car_data_new
 
