@@ -53,7 +53,7 @@ Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset
 
 Car_data_new
 
-cell_value = Car_data_new.iloc[65, 4]
+cell_value = Car_data_new.iloc[650, 4]
 cell_value
 momo= type(cell_value)
 momo
