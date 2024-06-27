@@ -51,8 +51,8 @@ column_Model = pd.DataFrame(column_Model, columns=encoder.categories_[0])
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
 Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
 
-Car_data_new.info()
-
+man = Car_data_new.info()
+man
 ## MACHINELEARNING
 
 y = Car_data_new['Price']
