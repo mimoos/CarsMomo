@@ -41,6 +41,7 @@ st.button('Predict the price')
 column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
 column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
+
 column_Model = Car_data['Model']
 encoder = OneHotEncoder(sparse_output=False)
 encoder.fit((column_Model).values.reshape(-1,1))
