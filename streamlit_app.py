@@ -8,6 +8,8 @@ import plotly.graph_objects as go
 from sklearn.linear_model import LinearRegression
 from sklearn import preprocessing
 from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 
