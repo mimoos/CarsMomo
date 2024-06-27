@@ -76,7 +76,7 @@ lol = len(w)
 lol
 
 def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
-    data = [None] * 425
+    data = [None] * 625
 
     Column_Names = []
     for row in X_Features:
