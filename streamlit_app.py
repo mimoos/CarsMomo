@@ -46,7 +46,7 @@ One_Hot_Encoder = preprocessing.OneHotEncoder(categories='auto')
 column_Model = Car_data['Model'].values
 ct = ColumnTransformer(transformers=[('onehot_categorical', OneHotEncoder(), [0])], remainder='passthrough')
 ## column_Model = One_Hot_Encoder.fit_transform(Car_data['Model'].values.reshape(-1, 1))
-column_Model = np.array(ct.fit_transform(column_Model.reshape(-1,1)))
+column_Model = np.array(ct.fit_transform(column_Model.reshape(-1)))
 ## column_Model = pd.DataFrame(column_Model, columns=One_Hot_Encoder.get_feature_names_out(Car_data['Model']))
 ## column_Model = pd.DataFrame(column_Model)
 ## column_Model = np.array(column_Model, dtype=int)
