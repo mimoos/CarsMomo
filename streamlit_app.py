@@ -51,12 +51,15 @@ column_Model = pd.DataFrame(column_Model, columns=encoder.categories_[0])
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
 Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
 
-man = Car_data_new.info()
-man
+Car_data_new
+
 ## MACHINELEARNING
 
 y = Car_data_new['Price']
 X = Car_data_new.drop(['Price'], axis=1)
+
+X = X.apply(pd.to_numeric, errors='coerce')
+y = Y.apply(pd.to_numeric, errors='coerce')
 
 LinearModel = LinearRegression()
 LinearModel.fit(X, y)
