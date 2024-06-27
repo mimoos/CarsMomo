@@ -40,7 +40,7 @@ column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
 column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
 column_Model = pd.get_dummies(data=Car_data, columns=['Model'])
-column_Model = column_Make.drop(['Price', 'Year', 'Make', 'Mileage'], axis=1)
+column_Model = column_Model.drop(['Price', 'Year', 'Make', 'Mileage'], axis=1)
 
 ## label_encoder = preprocessing.LabelEncoder()
 ## column_Model = label_encoder.fit_transform(Car_data['Model'])
