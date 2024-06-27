@@ -41,11 +41,11 @@ column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
 column_Model = Car_data['Model']
 encoder = OneHotEncoder(sparse_output=False)
-ohe = encoder.fit((column_Model).values.reshape(-1,1))
-column_Model = encoder.transform((ohe).values.reshape(-1,1))
-encoded_df = pd.DataFrame(column_Model, columns=encoder.categories_[0])
+column_Model_fit = encoder.fit((column_Model).values.reshape(-1,1))
+column_Model_transformed = encoder.transform((column_Model_fit).values.reshape(-1,1))
+#encoded_df = pd.DataFrame(column_Model, columns=encoder.categories_[0])
 
-column_Model
+column_Model_transformed
 
 #column_Model = Car_data['Model']
 #encoder = OneHotEncoder()
