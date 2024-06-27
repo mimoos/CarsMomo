@@ -55,6 +55,7 @@ Car_data_new
 
 cell_value = Car_data_new.iloc[1, 1]
 cell_value
+type(cell_value)
 
 ## MACHINELEARNING
 
