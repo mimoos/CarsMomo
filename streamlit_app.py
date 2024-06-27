@@ -13,7 +13,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 
-Car_data = Car_data.sample(frac=0.1, random_state=42)
+Car_data = Car_data.sample(frac=0.05, random_state=42)
 Car_data['Model'] = Car_data['Model'].str.replace(',', '')
 
 
@@ -46,7 +46,7 @@ column_Model = Car_data['Model']
 encoder = OneHotEncoder(sparse_output=False)
 encoder.fit((column_Model).values.reshape(-1,1))
 column_Model_transformed = encoder.transform((column_Model).values.reshape(-1, 1))
-encoded_df = pd.DataFrame(column_Model, columns=encoder.categories_[0])
+encoded_df = pd.DataFrame(column_Model_transformed, columns=encoder.categories_[0])
 
 encoded_df
 
