@@ -37,19 +37,21 @@ st.button('Predict the price')
 
 ## To get dummies for Make and encoding for Model
 
-## columns = pd.get_dummies(data=Car_data, columns=['Make', 'Model'])        too large data >200mb
-column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
-column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
+columns_Make = pd.get_dummies(data=Car_data, columns=['Make', 'Model'])        #too large data >200mb
+#column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
+#column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
+column_Make = column_Make.drop(['Price', 'Year', 'Mileage'], axis=1)
 
-
-column_Model = Car_data['Model']
-encoder = OneHotEncoder(sparse_output=False)
-encoder.fit((column_Model).values.reshape(-1,1))
-column_Model = pd.DataFrame(column_Model, columns=encoder.categories_[0])
+#column_Model = Car_data['Model']
+#encoder = OneHotEncoder(sparse_output=False)
+#encoder.fit((column_Model).values.reshape(-1,1))
+#column_Model = pd.DataFrame(column_Model, columns=encoder.categories_[0])
 
 
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
-Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
+#Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
+Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True)], axis=1)
+
 
 Car_data_new
 
