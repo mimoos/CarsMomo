@@ -13,7 +13,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 
-Car_data = Car_data.sample(frac=0.05, random_state=42)
+Car_data = Car_data.sample(frac=0.01, random_state=42)
 
 ## To ask the user the Make, Model, Year and Mileage
 
