@@ -101,7 +101,7 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     # for index, i in np.ndenumerate(Column_Names):
     for i in range(Column_Names.shape[0]):  # or range(len(theta))
     # for i in enumerate(Column_Names):
-        if Column_Names[i] == Car_make:
+        if Column_Names[i] == Car_model:
             data[i] = 1
         
     #Car_model = label_encoder.transform([Car_model])
