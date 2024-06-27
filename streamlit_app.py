@@ -13,7 +13,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 
-Car_data = Car_data.sample(frac=0.05, random_state=42)
+Car_data = Car_data.sample(frac=0.95, random_state=42)
 
 ## To ask the user the Make, Model, Year and Mileage
 
@@ -40,7 +40,7 @@ column_Make = pd.get_dummies(data=Car_data, columns=['Make'])
 column_Make = column_Make.drop(['Price', 'Year', 'Model', 'Mileage'], axis=1)
 
 column_Model = pd.get_dummies(data=Car_data, columns=['Model'])
-column_Model = column_Model.drop(['Price', 'Year', 'Make', 'Mileage'], axis=0)
+column_Model = column_Model.drop(['Price', 'Year', 'Make', 'Mileage'], axis=1)
 
 ## label_encoder = preprocessing.LabelEncoder()
 ## column_Model = label_encoder.fit_transform(Car_data['Model'])
