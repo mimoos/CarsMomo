@@ -67,7 +67,8 @@ LinearModel = LinearRegression()
 LinearModel.fit(X, y)
 
 X_Features = X.columns
-X_Features
+alllo = len(X_Features)
+alllo
 
 b = LinearModel.intercept_
 w = LinearModel.coef_
