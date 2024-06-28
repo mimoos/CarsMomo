@@ -33,7 +33,7 @@ Car_model = st.selectbox('Car Model:', options=List_model, index=None)
 Car_year = st.selectbox('Car Year:', options=List_year, index=None)
 Car_mileage = st.text_input('Car Mileage:', value=None)
 
-st.button('Predict the price', on_click=Click_Predict(Car_make, Car_model, Car_year, Car_mileage))
+# st.button('Predict the price', on_click=Click_Predict(Car_make, Car_model, Car_year, Car_mileage))
 
 ## To get dummies for Make and encoding for Model
 
@@ -112,7 +112,7 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     return Column_Names, data
 
 
-
+See = st.button('Predict the price', on_click=Click_Predict(Car_make, Car_model, Car_year, Car_mileage))
 
 X.shape[0]
 X_Features[60]
