@@ -130,7 +130,8 @@ def Predict_Price (data, w, b):
         p_i = data[i] * w[i]
         p = p + p_i
     p = p + b
-
+    if p < 0:
+        p = 'This car is predicted to not be sold anymore.'
     return p
 
 if Car_button == 1:
