@@ -79,7 +79,7 @@ def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
     for row in X_Features:
         Column_Names.append(row)
 
-    ## Car_year = int(Car_year)
+    Car_year = int(Car_year)
     data[0]= Car_year
 
     Car_mileage = int(Car_mileage)
