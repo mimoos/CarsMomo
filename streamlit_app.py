@@ -75,7 +75,7 @@ w
 lol = len(w)
 lol
 
-def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
+def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
     data = [None] * 625
 
     Column_Names = []
@@ -109,12 +109,22 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     
     ## df = pd.DataFrame(data)
     ## price_predicted
-    return Column_Names, data
+    return data
+
+def Predict_Price (data, w, b):
+    n = data.shape[0]
+    p = 0
+
+    for i in range[n]:
+        p_i = data[i] * w[i]
+        p = p + p_i
+    p = p + b
 
 
 if Car_button == 1:
-    See = Click_Predict(Car_make, Car_model, Car_year, Car_mileage)
-    See[1]
+    dt = Click_Data(Car_make, Car_model, Car_year, Car_mileage)
+    Price = Predict_Price(dt, w, b)
+    Price
 
 X.shape[0]
 X_Features[60]
