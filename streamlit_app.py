@@ -119,11 +119,6 @@ def Predict_Price (data, w, b):
     n = len(data)
     p = 0
 
-    if data.shape != w.shape:
-        st.write('Bool is FALSE')
-    if data.shape == w.shape:
-        st.write('Bool is TRUE')
-    
     for i in range(0, n):
         p_i = data[i] * w[i]
         p = p + p_i
