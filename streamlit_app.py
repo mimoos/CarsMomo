@@ -111,8 +111,8 @@ def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
     return data
 
 
-
 def Predict_Price (data, w, b):
+    data = np.array(data)
     n = data.shape[0]
     p = 0
 
@@ -124,7 +124,6 @@ def Predict_Price (data, w, b):
 
 if Car_button == 1:
     dt = Click_Data(Car_make, Car_model, Car_year, Car_mileage)
-    dt.shape
     Price = Predict_Price(dt, w, b)
     Price
 
