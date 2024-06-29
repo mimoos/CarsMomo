@@ -112,7 +112,7 @@ def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
 
 
 def Predict_Price (data, w, b):
-    #data = np.array(data)
+    data = np.array(data)
     #n = data.shape[0]
     n = len(data)
     p = 0
