@@ -117,8 +117,10 @@ def Predict_Price (data, w, b):
     n = len(data)
     p = 0
 
-    data
-    w
+    see=type(data)
+    see
+    see2=type(w)
+    see2
 
     for i in range(0, n):
         p_i = data[i] * w[i]
