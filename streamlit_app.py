@@ -72,8 +72,7 @@ b = LinearModel.intercept_
 w = LinearModel.coef_
 
 w
-lol = len(w)
-lol
+
 
 def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
     data = [None] * 625
@@ -126,8 +125,7 @@ if Car_button == 1:
     Price = Predict_Price(dt, w, b)
     Price
 
-X.shape[0]
-X_Features[60]
+
 
 
 
