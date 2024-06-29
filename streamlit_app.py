@@ -71,7 +71,8 @@ X_Features = X.columns
 b = LinearModel.intercept_
 w = LinearModel.coef_
 
-w
+ww= type(w)
+ww
 
 
 def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
