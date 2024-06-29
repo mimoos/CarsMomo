@@ -116,6 +116,10 @@ def Predict_Price (data, w, b):
     data = data.fillna(value=np.nan)
     #data = data.to_numpy().tolist()
     data = data.to_numpy()
+
+    st.write(type(w))
+    st.write(type(data))
+    
     #n = data.shape[0]
     n = len(data)
     p = 0
