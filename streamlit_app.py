@@ -129,6 +129,7 @@ def Predict_Price (data, w, b):
         p = p + p_i
     p = p + b
 
+    return p
 
 if Car_button == 1:
     dt = Click_Data(Car_make, Car_model, Car_year, Car_mileage)
