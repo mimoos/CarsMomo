@@ -112,11 +112,11 @@ def Click_Predict (Car_make, Car_model, Car_year, Car_mileage):
     return Column_Names, data
 
 
-See = st.button('Predict the price', on_click=Click_Predict(Car_make, Car_model, Car_year, Car_mileage))
+# See = st.button('Predict the price', on_click=Click_Predict(Car_make, Car_model, Car_year, Car_mileage))
 
 X.shape[0]
 X_Features[60]
-See[1]
+# See[1]
 
 
 """
