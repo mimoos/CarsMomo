@@ -114,7 +114,8 @@ def Predict_Price (data, w, b):
     #w = np.array(w)
     data = pd.DataFrame(data = data)
     data = data.fillna(value=np.nan)
-    data = data.to_numpy().tolist()
+    #data = data.to_numpy().tolist()
+    data = data.to_numpy()
     #n = data.shape[0]
     n = len(data)
     p = 0
