@@ -71,9 +71,6 @@ X_Features = X.columns
 b = LinearModel.intercept_
 w = LinearModel.coef_
 
-ww= type(w)
-ww
-
 
 def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
     data = [None] * 625
@@ -114,6 +111,7 @@ def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
 
 def Predict_Price (data, w, b):
     data = np.array(data)
+    w = np.array(w)
     #n = data.shape[0]
     n = len(data)
     p = 0
