@@ -116,6 +116,7 @@ def Predict_Price (data, w, b):
     data = data.fillna(value=np.nan)
     #data = data.to_numpy().tolist()
     data = data.to_numpy()
+    w = w.to_numpy()
 
     st.write(w)
     st.write(data)
@@ -133,7 +134,7 @@ def Predict_Price (data, w, b):
 if Car_button == 1:
     dt = Click_Data(Car_make, Car_model, Car_year, Car_mileage)
     Price = Predict_Price(dt, w, b)
-    Price
+    st.write('The price is $', Price)
 
 
 
