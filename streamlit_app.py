@@ -138,7 +138,7 @@ def Predict_Price (data, w, b):
 if Car_button == 1:
     dt = Click_Data(Car_make, Car_model, Car_year, Car_mileage)
     Price = Predict_Price(dt, w, b)
-    st.write('The price is $', '.0f'% Price)
+    st.write('The price is $','%.0f' % Price)
 
 
 
