@@ -17,8 +17,6 @@ from sklearn.preprocessing import OneHotEncoder
 This is a tool made for predicting a car price from the year 2018. You can get a prediction:
 """
 
-
-
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 
 Car_data = Car_data.sample(frac=0.002, random_state=42)
@@ -30,7 +28,7 @@ Car_EDA = Car_data
 Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 #fig = go.Figure()
 #data=[go.Bar(x=[1, 2, 3], y=[1, 3, 2])]
-st.bar_chart(data=Car_data.var(), x=Car_data('Year','Mileage'), y=Car_data('Price'), x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
+#st.bar_chart(data=Car_data.var(), x=Car_data('Year','Mileage'), y=Car_data('Price'), x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
 
 
 
