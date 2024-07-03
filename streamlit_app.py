@@ -11,6 +11,14 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 
 
+"""
+# Welcome to Car Price Prediction
+
+This is a tool made for predicting a car price from the year 2018. You can get a prediction:
+"""
+
+
+
 Car_data = pd.read_csv('true_car_listings_fix.csv')
 
 Car_data = Car_data.sample(frac=0.002, random_state=42)
@@ -152,15 +160,7 @@ if Car_button == 1:
 
 
 
-"""
-# Welcome to Streamlit CAN I EDIT THIS?!
-
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
-
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
+##
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
