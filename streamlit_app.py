@@ -17,6 +17,13 @@ Car_data = Car_data.sample(frac=0.002, random_state=42)
 Car_data['Model'] = Car_data['Model'].str.replace(',', '')
 #Car_data['Model'] = Car_data['Model'].str.replace("Mazda", "")
 
+# Simple EDA
+
+#fig = go.Figure()
+#data=[go.Bar(x=[1, 2, 3], y=[1, 3, 2])]
+st.bar_chart(data=Car_data, x=Car_data['Year','Mileage'], y=Car_data['Price'], x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
+
+
 
 ## To ask the user the Make, Model, Year and Mileage
 
