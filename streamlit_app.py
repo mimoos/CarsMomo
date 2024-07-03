@@ -33,7 +33,7 @@ Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 yy = Car_EDA['Price']
 Car_EDA.index.names = ['INDEX']
 Car_EDA
-xx = Car_EDA['INDEX']
+xx = Car_EDA.index
 st.bar_chart(Car_EDA, x = xx, y = yy)
 #x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
 
