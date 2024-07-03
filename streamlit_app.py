@@ -28,7 +28,7 @@ Car_EDA = Car_data
 Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 #fig = go.Figure()
 #data=[go.Bar(x=[1, 2, 3], y=[1, 3, 2])]
-#st.bar_chart(data=Car_data.var(), x=Car_data('Year','Mileage'), y=Car_data('Price'), x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
+st.bar_chart(data=Car_data, x=Car_data('Year'), y=Car_data('Price'), x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
 
 
 
