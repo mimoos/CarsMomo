@@ -31,7 +31,7 @@ Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 #Car_EDA.rename(index=str).index 
 xx = Car_data['Year']
 yy = Car_data['Price']
-st.bar_chart(Car_data, xx, yy)
+st.bar_chart(Car_data, x = xx, y = yy)
 #x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
 
 
