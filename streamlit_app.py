@@ -29,7 +29,9 @@ Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 #fig = go.Figure()
 #data=[go.Bar(x=[1, 2, 3], y=[1, 3, 2])]
 #Car_EDA.rename(index=str).index 
-st.bar_chart(Car_data, Car_data['Year'], Car_data['Price'])
+xx = Car_data['Year']
+yy = Car_data['Price']
+st.bar_chart(Car_data, xx, yy)
 #x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
 
 
