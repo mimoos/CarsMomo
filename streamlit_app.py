@@ -35,9 +35,9 @@ yy = Car_EDA['Price']
 Car_EDA.index.names = ['INDEX']
 Car_EDA
 xx = Car_EDA.index
-#st.bar_chart(data = Car_EDA, x = xx, y = yy)
+st.bar_chart(data = Car_EDA, x = xx, y = yy)
 #x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
-
+'''
 st.dataframe(Car_EDA)
 
 medal_type = st.selectbox('Medal Type', ['Year', 'Mileage', 'Mark', 'Model'])
@@ -47,7 +47,7 @@ fig = px.bar(Car_EDA, values=medal_type, names='ctry',
                  height=300, width=200)
 fig.update_layout(margin=dict(l=20, r=20, t=30, b=0),)
 st.plotly_chart(fig, use_container_width=True)
-
+'''
 
 
 ## To ask the user the Make, Model, Year and Mileage
