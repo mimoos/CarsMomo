@@ -31,7 +31,7 @@ Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 #data=[go.Bar(x=[1, 2, 3], y=[1, 3, 2])]
 #Car_EDA.rename(index=str).index 
 
-st.scatter_chart(data = Car_EDA, x = 'Year', y = 'Price')
+st.scatter_chart(data = Car_EDA, x = 'Price', y = 'Year')
 #x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
 '''
 st.dataframe(Car_EDA)
