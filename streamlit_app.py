@@ -31,18 +31,8 @@ Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 #Car_EDA.rename(index=str).index 
 Car_EDA = Car_EDA.query('Price < 100000')
 st.scatter_chart(data = Car_EDA, x = 'Price', y = 'Mileage')
-#x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
 
 st.dataframe(Car_EDA)
-
-    
-fig = px.bar(Car_EDA, names='ctry',
-                 title=f'number of {medal_type} medals',
-                 height=300, width=200)
-fig.update_layout(margin=dict(l=20, r=20, t=30, b=0),)
-st.plotly_chart(fig, use_container_width=True)
-
-
 
 ## To ask the user the Make, Model, Year and Mileage
 
@@ -167,33 +157,3 @@ if Car_button == 1:
     st.write('The price is $','%.0f' % Price)
 
 
-
-
-
-##
-
-num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
-num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
-
-indices = np.linspace(0, 1, num_points)
-theta = 2 * np.pi * num_turns * indices
-radius = indices
-
-x = radius * np.cos(theta)
-y = radius * np.sin(theta)
-
-df = pd.DataFrame({
-    "x": x,
-    "y": y,
-    "idx": indices,
-    "rand": np.random.randn(num_points),
-})
-
-st.altair_chart(alt.Chart(df, height=700, width=700)
-    .mark_point(filled=True)
-    .encode(
-        x=alt.X("x", axis=None),
-        y=alt.Y("y", axis=None),
-        color=alt.Color("idx", legend=None, scale=alt.Scale()),
-        size=alt.Size("rand", legend=None, scale=alt.Scale(range=[1, 150])),
-    ))
