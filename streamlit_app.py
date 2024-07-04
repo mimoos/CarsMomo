@@ -35,9 +35,8 @@ st.scatter_chart(data = Car_EDA, x = 'Price', y = 'Mileage')
 
 st.dataframe(Car_EDA)
 
-medal_type = st.selectbox('Medal Type', ['Year', 'Mileage', 'Mark', 'Model'])
     
-fig = px.bar(Car_EDA, values=medal_type, names='ctry',
+fig = px.bar(Car_EDA, names='ctry',
                  title=f'number of {medal_type} medals',
                  height=300, width=200)
 fig.update_layout(margin=dict(l=20, r=20, t=30, b=0),)
