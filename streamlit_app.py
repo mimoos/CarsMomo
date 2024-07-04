@@ -42,7 +42,7 @@ st.dataframe(Car_EDA)
 
 medal_type = st.selectbox('Medal Type', ['Year', 'Mileage', 'Mark', 'Model'])
     
-fig = px.chart(Car_EDA, values=medal_type, names='ctry',
+fig = px.line(Car_EDA, values=medal_type, names='ctry',
                  title=f'number of {medal_type} medals',
                  height=300, width=200)
 fig.update_layout(margin=dict(l=20, r=20, t=30, b=0),)
