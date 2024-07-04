@@ -33,7 +33,7 @@ Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 
 Car_EDA = Car_EDA.drop(['Mileage'], axis=1)
 
-st.bar_chart(data = Car_EDA, x = 'Year', y = 'Mileage')
+st.bar_chart(data = Car_EDA, x = 'Year', y = 'Price')
 #x_label='Year and Mileage', y_label='Price', color=None, horizontal=False, width=12, height=8, use_container_width=True)
 '''
 st.dataframe(Car_EDA)
