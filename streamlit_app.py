@@ -136,8 +136,8 @@ def Predict_Price (data, w, b):
     data = [i[0] for i in data]
     w = w.tolist()
 
-    st.write(w)
-    st.write(data)
+    #st.write(w)
+    #st.write(data)
     
     #n = data.shape[0]
     n = len(data)
