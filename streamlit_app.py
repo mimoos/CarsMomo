@@ -32,7 +32,7 @@ Car_EDA = Car_EDA.drop(['Make', 'Model'], axis=1)
 Car_EDA = Car_EDA.query('Price < 100000')
 st.scatter_chart(data = Car_EDA, x = 'Price', y = 'Mileage')
 
-st.dataframe(Car_EDA)
+#st.dataframe(Car_EDA)
 
 ## To ask the user the Make, Model, Year and Mileage
 
@@ -70,7 +70,7 @@ column_Model = column_Model.drop(['Price', 'Year', 'Make', 'Mileage'], axis=1)
 Car_data_new = Car_data.drop(['Make', 'Model'], axis=1)
 Car_data_new = pd.concat([Car_data_new.reset_index(drop=True), column_Make.reset_index(drop=True), column_Model.reset_index(drop=True)], axis=1)
 
-Car_data_new
+#Car_data_new
 
 
 ## MACHINELEARNING
