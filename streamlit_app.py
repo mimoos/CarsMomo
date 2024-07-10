@@ -49,7 +49,7 @@ Car_make = st.selectbox('Car Make:', options=List_make, index=None)
 Car_model = st.selectbox('Car Model:', options=List_model, index=None)
 Car_year = st.selectbox('Car Year:', options=List_year, index=None)
 #Car_mileage = st.text_input('Car Mileage:', value='0')
-Car_mileage = st.slider('Car Mileage:', min_value = 0, max_value = 250000)
+Car_mileage = st.slider('Car Mileage:', min_value = 0, max_value = 250000, step = 50)
 
 Car_button = st.button('Predict the price')
 
