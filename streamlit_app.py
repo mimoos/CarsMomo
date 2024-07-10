@@ -48,6 +48,7 @@ List_year.sort()
 Car_make = st.selectbox('Car Make:', options=List_make, index=None)
 Car_model = st.selectbox('Car Model:', options=List_model, index=None)
 Car_year = st.selectbox('Car Year:', options=List_year, index=None)
+Car_mileage = '0'
 Car_mileage = st.text_input('Car Mileage:', value=None)
 
 
@@ -100,8 +101,6 @@ def Click_Data (Car_make, Car_model, Car_year, Car_mileage):
     Car_year = int(Car_year)
     data[0]= Car_year
 
-    if Car_mileage == '':
-        Car_mileage = '0'
     Car_mileage = int(Car_mileage)
     data[1] = Car_mileage
 
